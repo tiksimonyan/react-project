@@ -19,7 +19,7 @@ function Search({onChange}) {
   
   return (
     <div className="search">
-      <input type="search" className={clickedSearch ? "active" : ""} value={searchQuery} onChange={handleInputChange} />
+      <input type="search" className={clickedSearch ? "active" : ""} value={searchQuery} onChange={handleInputChange} placeholder="Search..."/>
       <img src={search} alt="Search" onClick={handleSearchClick} />
     </div>
   );

@@ -1,9 +1,15 @@
-import React from "react";
+import React, {useState,useEffect } from "react";
 import "./Card.css"; // Assuming you have a CSS file for styling
+import Popup from "../popup/Popup";
 
 function Card({ title, text, tags, author, img, img2x, date, views }) {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
   return (
-    <div className="card">
+    <div className="card" onClick={togglePopup}>
       <img
         src={img}
         srcSet={`${img} 1x, ${img2x} 2x`}
@@ -20,6 +26,7 @@ function Card({ title, text, tags, author, img, img2x, date, views }) {
         </div>
         <p className="card-text">{text}</p>
       </div>
+      <Popup isOpen={isPopupOpen} onClose={togglePopup} cardData={{ title, text, tags, author, img,img2x, date, views }} />
     </div>
   );
 }

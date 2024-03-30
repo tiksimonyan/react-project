@@ -61,14 +61,15 @@
     border: 1px solid #E9E9E9;
     border-top: none;
     background-color: white;
-
+    padding: 12px 20px;
 
 }
 
 .dropdown li {
     border-bottom: 1px solid #E9E9E9;
-    padding: 6px 0;
+    padding: 8px 0;
     cursor: pointer;
+    width: 100%;
 }
 
 .menus li:hover .dropdown,
@@ -114,16 +115,17 @@
         display: block;
         flex-direction: column;
         position: fixed;
-        top: 36px;
+        top: 56px;
         bottom: 0;
         left: 0;
         width: 80%;
         padding: 20px;
+        margin: 0;
     }
 
     .header li {
         border-bottom: 1px solid #E9E9E9;
-        padding: 10px 0;
+        padding: 16px 0;
     }
 
     .header nav {
@@ -133,7 +135,7 @@
 
     .header .top_bar {
         width: 90%;
-        padding-top:20px;
+        padding:28px 0;
         background-color:white
         /* border-bottom: 1px solid #E9E9E9; */
     }
@@ -148,6 +150,7 @@
         padding-top: 20px;
         top: 70px;
         width: 176px;
+        transition:1s;
     }
     .header.active .dropdown ul{
         border: none;
